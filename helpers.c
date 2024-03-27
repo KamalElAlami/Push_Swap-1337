@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   helpers.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 21:07:54 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/03/27 22:42:15 by kael-ala         ###   ########.fr       */
+/*   Created: 2024/03/27 00:59:10 by kael-ala          #+#    #+#             */
+/*   Updated: 2024/03/27 22:41:21 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "./includes/libft.h"
+#include "./includes/push_swap.h"
 
-# include <unistd.h>
-# include <stdlib.h>
+void	ft_free_array(char **strs)
+{
+	int	i;
 
-int		extra_operator(char *buffer);
-int		check_args(char **args);
-int		strange_character(char *buffer);
-int		check_dup_ints(char *buffer);
-int		check_overflow(char *buffer);
+	i = 0;
+	while (strs[i])
+		free(strs[i++]);
+	free(strs);
+}
 
-int		count_args(char **args);
-char	*set_buffer(char **args);
-void	ft_free_array(char **strs);
-void	ft_perror(char *msg);
-
-#endif
+void	ft_perror(char *msg)
+{
+	printf("%s", msg);
+}

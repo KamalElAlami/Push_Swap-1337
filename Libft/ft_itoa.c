@@ -62,11 +62,9 @@ static void	set_char(char *buffer, int n, int extra)
 char	*ft_itoa(int n)
 {
 	char	*buffer;
-	int		i;
 	int		extra;
 
 	extra = 1;
-	i = 0;
 	if (n == 0)
 		return (ft_strdup("0"));
 	if (n == INT_MIN)
