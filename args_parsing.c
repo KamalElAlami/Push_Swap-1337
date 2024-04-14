@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   args_parsing.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 22:51:53 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/03/28 22:31:39 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/14 23:12:37 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,12 @@ int	check_dup_ints(char *buffer)
 	return (0);
 }
 
-static	int	num_check(char digit, char **digits, long num, int sign)
+static	int	num_check(char digit, char **digits, long *num, int sign)
 {
 	if (ft_isdigit(digit))
 	{
-		num = num * 10 + (digit - '0');
-		if ((num * sign) > INT_MAX || (num * sign) < INT_MIN)
+		*num = *num * 10 + (digit - '0');
+		if ((*num * sign) > INT_MAX || (*num * sign) < INT_MIN)
 		{
 			ft_free_array(digits);
 			return (1);
@@ -106,7 +106,7 @@ int	check_overflow(char *buffer)
 			sign = -1;
 		while (*digit)
 		{
-			if (num_check(*digit, digits, num, sign))
+			if (num_check(*digit, digits, &num, sign))
 				return (1);
 			digit++;
 		}

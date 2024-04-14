@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/14 21:23:48 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/15 00:47:25 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 #include "./includes/push_swap.h"
 
+void sort_stack(t_stack_a *args)
+{
+	
+}
 
 int	main(int ac, char **av)
 {
@@ -28,15 +32,13 @@ int	main(int ac, char **av)
 			free(nums);
 			ft_perror("Error\n");
 		}
-		// args = set_stack_a(nums);
-		// if (stack_sorted(args))
-		// {
-		// 	if (ft_lstsize(args) <= 2)
-		// 		// sa(args);
-		// 	index_stack(args);
-		// }
-		// ft_lstclear(args);
-		// free(nums);
+		args = set_stack_a(nums);
+		if (stack_sorted(args))
+		{
+			sort_stack(args);
+		}
+		ft_lstclear(args);
+		free(nums);
 	}
 	else
 		return (1);
