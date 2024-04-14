@@ -3,26 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 15:01:54 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/12/04 18:17:26 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/03/29 20:22:45 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_stack_a *lst)
 {
-	t_list	*tmp;
-
-	if (!del || !lst)
+	if (!lst)
 		return ;
-	tmp = *lst;
-	while (*lst)
+	while (lst)
 	{
-		tmp = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = tmp;
+		free(lst);
+		lst = lst->next;
 	}
 }

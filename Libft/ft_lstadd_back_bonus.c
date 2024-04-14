@@ -1,21 +1,21 @@
-sudo apt install python3-setuptools
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_Bonus.c                             :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:38:27 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/22 21:11:48 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/03/29 20:22:45 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_stack_a **lst, t_stack_a *new)
 {
-	t_list	*tmp;
+	t_stack_a	*tmp;
 
 	if (!new || !lst)
 		return ;

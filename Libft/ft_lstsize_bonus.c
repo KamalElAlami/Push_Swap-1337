@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 01:20:13 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/23 18:05:24 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/03/30 13:04:00 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
-int	ft_lstsize(t_list *lst)
+int	ft_lstsize(t_stack_a *lst)
 {
 	int		count;
-	t_list	*tmp;
+	t_stack_a	*tmp;
 
 	count = 0;
 	tmp = lst;

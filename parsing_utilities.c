@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:06:41 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/03/27 22:39:36 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/14 21:20:12 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,18 @@ char	*set_buffer(char **args)
 {
 	int		i;
 	char	*buffer;
+	char	*temp;
 
 	i = 1;
+	buffer = NULL;
 	while (args[i])
 	{
-		buffer = ft_strjoin(buffer, args[i]);
-		buffer = ft_strjoin(buffer, " ");
+		temp = ft_strjoin(buffer, args[i]);
+		free(buffer);
+		buffer = temp;
+		temp = ft_strjoin(buffer, " ");
+		free(buffer);
+		buffer = temp;
 		i++;
 	}
 	return (buffer);

@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_Bonus.c                               :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 20:52:41 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/23 18:04:39 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/03/29 20:22:45 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_stack_a *lst, void (*del)(void*))
 {
 	if (!del)
 		return ;
 	if (lst)
 	{
-		(del)(lst->content);
+		(del)(lst->number);
 		free(lst);
 	}
 }
