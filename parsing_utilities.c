@@ -3,15 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   parsing_utilities.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:06:41 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/14 21:20:12 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/15 21:12:19 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 #include "./includes/push_swap.h"
+
+int	ft_isblank(char *buffer)
+{
+	int	i;
+
+	i = 0;
+	while (buffer[i])
+	{
+		if (buffer[i] != ' ')
+			return (0);
+		i++;
+	}
+	return (1);
+}
 
 int	count_args(char **args)
 {
@@ -49,7 +63,8 @@ int	check_args(char **args)
 	char	*buffer;
 
 	buffer = set_buffer(args);
-	if (!(extra_operator(buffer)) && !(strange_character(buffer))
+	
+	if (!(ft_isblank(buffer)) && !(extra_operator(buffer)) && !(strange_character(buffer))
 		&& !(check_dup_ints(buffer)) && !(check_overflow(buffer)))
 	{
 		free(buffer);

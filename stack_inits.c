@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_inits.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 18:06:30 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/03/29 20:22:45 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/15 19:59:18 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,7 @@ int stack_sorted(t_stack_a *args)
     while (tmp)
     {
         if (tmp->next && tmp->number > tmp->next->number )
-        {
             return (1);
-        }
         tmp = tmp->next;
     }
     return (0);

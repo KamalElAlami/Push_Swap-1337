@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   helpers.c                                          :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 00:59:10 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/15 21:15:23 by kael-ala         ###   ########.fr       */
+/*   Created: 2023/12/09 02:27:09 by kael-ala          #+#    #+#             */
+/*   Updated: 2024/03/15 01:43:13 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libft.h"
-#include "./includes/push_swap.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-void	ft_free_array(char **strs)
-{
-	int	i;
+# include <unistd.h>
+# include <stdarg.h>
 
-	i = 0;
-	if (!strs)
-		return ;
-	while (strs[i])
-		free(strs[i++]);
-	free(strs);
-	strs = NULL;
-}
+int	ft_printf(const char *format, ...);
+int	ft_putchar(int c);
+int	ft_putnbr(int n);
+int	ft_putaddress(void *n);
+int	ft_putstr(const char *str);
+int	ft_putexa(unsigned long long n);
+int	ft_putexa_upper(unsigned long long n);
+int	ft_putunbr(unsigned int n);
+int	ft_strcmp(const char *s1, const char *s2);
 
-void	ft_perror(char *msg)
-{
-	printf("%s", msg);
-	exit(EXIT_FAILURE);
-}
+#endif

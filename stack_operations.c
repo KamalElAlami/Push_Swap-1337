@@ -1,45 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   stack_operations.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/15 21:32:27 by kael-ala         ###   ########.fr       */
+/*   Created: 2024/04/15 21:32:14 by kael-ala          #+#    #+#             */
+/*   Updated: 2024/04/15 21:42:35 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 #include "./includes/push_swap.h"
 
-void sort_stack(t_stack_a *args)
-{
-	printf("sorting stack");
-	exit(0);
-}
-
-int	main(int ac, char **av)
-{
-	t_stack_a	*args;
-	t_stack_a	*temp;
-	char		*nums;
-	
-	nums = set_buffer(av);
-	if (ac > 1)
-	{
-		if (check_args(av))
-		{
-			free(nums);
-			ft_perror("Error\n");
-		}
-		args = set_stack_a(nums);
-		if (stack_sorted(args))
-			sort_stack(args);
-		printf("stack sorted");
-		ft_lstclear(args);
-		free(nums);
-	}
-	else
-		return (1);
-}
