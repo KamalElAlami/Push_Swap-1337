@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:07:54 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/16 20:30:53 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:32:12 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,7 @@ int			ft_lstsize(t_stack_a *lst);
 t_stack_a	*set_stack_a(char *nums);
 int 		stack_sorted(t_stack_a *args);
 void		index_stack(t_stack_a *args);
+
+void swap_it(t_stack_a **stack, char c);
 
 #endif

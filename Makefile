@@ -6,7 +6,7 @@
 #    By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 16:30:49 by kael-ala          #+#    #+#              #
-#    Updated: 2024/04/16 21:46:54 by kael-ala         ###   ########.fr        #
+#    Updated: 2024/04/17 15:33:12 by kael-ala         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,10 +26,10 @@ FILES = ./ft_printf/ft_printf.c ./ft_printf/printtools.c ./ft_printf/printtoolss
 	./Libft/ft_tolower.c ./Libft/ft_toupper.c ./Libft/ft_memmove.c ./Libft/ft_split.c \
 	./Libft/ft_substr.c ./Libft/ft_lstadd_front_bonus.c ./Libft/ft_lstnew_bonus.c ./Libft/ft_lstsize_bonus.c ./Libft/ft_lstlast_bonus.c ./Libft/ft_lstadd_back_bonus.c ./Libft/ft_lstdelone_bonus.c ./Libft/ft_lstclear_bonus.c ./Libft/ft_lstiter_bonus.c
 
-CFILES = push_swap.c args_parsing.c parsing_utilities.c stack_inits.c helpers.c
+CFILES = push_swap.c args_parsing.c parsing_utilities.c stack_inits.c helpers.c stack_operations.c
 
 
-INCS = ./includes/ft_printf.h ./includes/push_swapk.h ./includes/libft.h 
+INCS = ./includes/ft_printf.h ./includes/push_swap.h ./includes/libft.h 
 
 OBJ = $(FILES:.c=.o)
 COBJ = $(CFILES:.c=.o)
