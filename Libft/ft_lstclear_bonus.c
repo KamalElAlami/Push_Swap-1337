@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 15:01:54 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/03/29 20:22:45 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/16 21:34:31 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ void	ft_lstclear(t_stack_a *lst)
 {
 	if (!lst)
 		return ;
+	t_stack_a *clear;
 	while (lst)
 	{
-		free(lst);
+		clear = lst;
 		lst = lst->next;
+		free(clear);
 	}
 }

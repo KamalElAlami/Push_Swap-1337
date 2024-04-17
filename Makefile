@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+         #
+#    By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 16:30:49 by kael-ala          #+#    #+#              #
-#    Updated: 2024/04/15 16:30:51 by kael-ala         ###   ########.fr        #
+#    Updated: 2024/04/16 21:46:54 by kael-ala         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,12 +29,12 @@ FILES = ./ft_printf/ft_printf.c ./ft_printf/printtools.c ./ft_printf/printtoolss
 CFILES = push_swap.c args_parsing.c parsing_utilities.c stack_inits.c helpers.c
 
 
-INCS = ./includes/ft_printf.h ./includes/so_long.h ./includes/libft.h 
+INCS = ./includes/ft_printf.h ./includes/push_swapk.h ./includes/libft.h 
 
 OBJ = $(FILES:.c=.o)
 COBJ = $(CFILES:.c=.o)
 
-all : $(NAME)
+all : $(NAME) clean
 
 $(NAME) : $(OBJ) $(COBJ)
 	$(CC) $(FLAGS) $^  -o $(NAME)
