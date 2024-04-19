@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/17 15:39:34 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/19 04:25:01 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,14 @@ void print_stack(t_stack_a *stack)
 }
 void sort_stack(t_stack_a *args)
 {
+	t_stack_a *stb;
+
 	index_stack(args);
-	if (ft_lstsize(args) == 2)
-		swap_it(&args,'a');
-	print_stack(args);
+	// if (ft_lstsize(args) == 2)
+	// 	swap_it(&args,'a');
+	stb = ft_lstnew(10);
+	push_it(&args, &stb, 'a');
+	// print_stack(stb);
 	// else if (ft_lstsize(args) == 3)
 	// 	three_algo(args);
 	// else if (ft_lstsize(args) == 4)
@@ -78,7 +82,7 @@ int	main(int ac, char **av)
 		args = set_stack_a(nums);
 		if (stack_sorted(args))
 			sort_stack(args);
-		ft_lstclear(args);
+		// ft_lstclear(&args);
 		free(nums);
 	}
 	else

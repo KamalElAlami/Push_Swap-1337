@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:49:08 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/03/30 13:01:29 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/17 20:09:17 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,8 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-void	ft_lstadd_front(t_list **lst, t_list *new);
+// void	ft_lstadd_front(t_list **lst, t_list *new);
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 #endif
