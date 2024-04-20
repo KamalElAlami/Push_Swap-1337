@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/19 04:25:01 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/19 23:11:16 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,22 +35,23 @@ void index_stack(t_stack_a *args)
 
 void print_stack(t_stack_a *stack)
 {
-	while(stack)
+	t_stack_a *tmp;
+
+	tmp = stack;
+	while(tmp)
 	{
-		printf("%d\n",stack -> number);
-		stack = stack -> next;
+		printf("%d\n",tmp -> number);
+		tmp = tmp -> next;
 	}
 }
-void sort_stack(t_stack_a *args)
+void sort_stack(t_stack_a **args)
 {
 	t_stack_a *stb;
 
-	index_stack(args);
-	// if (ft_lstsize(args) == 2)
-	// 	swap_it(&args,'a');
-	stb = ft_lstnew(10);
-	push_it(&args, &stb, 'a');
-	// print_stack(stb);
+	stb = NULL;
+	index_stack(*args);
+	if (ft_lstsize(args) == 2)
+		__swap__(&args,'a');
 	// else if (ft_lstsize(args) == 3)
 	// 	three_algo(args);
 	// else if (ft_lstsize(args) == 4)
@@ -81,7 +82,7 @@ int	main(int ac, char **av)
 		}
 		args = set_stack_a(nums);
 		if (stack_sorted(args))
-			sort_stack(args);
+			sort_stack(&args);
 		// ft_lstclear(&args);
 		free(nums);
 	}
