@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:07:54 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/19 23:13:20 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/21 04:07:20 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ void		ft_lstclear(t_stack_a **lst);
 int			ft_lstsize(t_stack_a *lst);
 void		ft_lstdelone(t_stack_a **lst);
 void		ft_lstadd_front(t_stack_a **lst, t_stack_a **new);
+void		lstrotate(t_stack_a **lst);
+void		lstreverserotate(t_stack_a **lst);
+void    	lstswap(t_stack_a **stack);
 
 t_stack_a	*set_stack_a(char *nums);
 int 		stack_sorted(t_stack_a *args);
@@ -50,5 +53,7 @@ void 		print_stack(t_stack_a *stack);
 
 void 		__swap__(t_stack_a **stack, char c);
 void    	__push__(t_stack_a **stack_a, t_stack_a **stack_b, char c);
+void		__rotate__(t_stack_a **stack, char c);
+void		__reverse_rotate__(t_stack_a **stack, char c);
 
 #endif

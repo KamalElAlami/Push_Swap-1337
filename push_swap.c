@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/19 23:11:16 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/21 22:31:47 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,31 +40,28 @@ void print_stack(t_stack_a *stack)
 	tmp = stack;
 	while(tmp)
 	{
-		printf("%d\n",tmp -> number);
+		printf("%d",tmp -> number);
+		printf("   index => %d\n",tmp -> index);
 		tmp = tmp -> next;
 	}
 }
 void sort_stack(t_stack_a **args)
 {
-	t_stack_a *stb;
+	// t_stack_a *stb;
 
-	stb = NULL;
+	// stb = NULL;
 	index_stack(*args);
+	print_stack(*args);
 	if (ft_lstsize(args) == 2)
 		__swap__(&args,'a');
-	// else if (ft_lstsize(args) == 3)
-	// 	three_algo(args);
+	else if (ft_lstsize(args) == 3)
+		three_algo(args);
 	// else if (ft_lstsize(args) == 4)
 	// 	four_algo(args);
 	// else if (ft_lstsize(args) == 5)
 	// 	five_algo(args);
 	// else if (ft_lstsize(args) > 5)
-		// big_algo(args);
-	// while(args)
-	// {
-	// 	printf("%d\n",args->index);
-	// 	args = args -> next;
-	// }
+	// 	big_algo(args);
 }
 
 int	main(int ac, char **av)

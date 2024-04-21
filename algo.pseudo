@@ -1,0 +1,30 @@
+
+
+void chunks(void)
+{
+    len = lstsize(args); // 500
+
+    chunkssize = len / 5;//  = 100
+
+    1 * 100 - 1  //99
+
+    while 
+    
+
+}
+var1 = 1
+var2 = 2
+var3 = 3
+
+if (var1 > var2 && var2 < var3 && var1 < var3)
+    sa()
+else if (var1 > var2 && var2 > var3 && var1 > var3)
+    sa()
+    rra()
+else if (var1 > var2 && var2 < var3 && var1 > var3)
+    ra()
+else if (var1 < var2 && var2 > var3 && var1 < var3)
+    sa()
+    ra()
+else if (var1 < var2 && var2 > var3 && var1 > var3)
+    rra()

@@ -1,26 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   stack_sorting.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 20:41:19 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/20 15:46:00 by kael-ala         ###   ########.fr       */
+/*   Created: 2024/04/21 22:33:17 by kael-ala          #+#    #+#             */
+/*   Updated: 2024/04/21 22:33:28 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "../includes/libft.h"
-#include "../includes/push_swap.h"
 
-void	ft_lstadd_front(t_stack_a **lst, t_stack_a **new)
-{
-	t_stack_a *tmp;
-	
-	tmp = *new;
-	if (!lst || !*lst)
-		return ;
-	*new = *lst ;
-	*lst = (*lst)->next;
-	(*new)->next = tmp;
-}
+#include "./includes/libft.h"
+#include "./includes/push_swap.h"
+#include "./includes/ft_printf.h"
+
