@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 19:59:21 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/21 04:08:49 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/22 04:44:29 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	lstrotate(t_stack_a **lst)
 	}
 	return ;
 }
+
 void	lstreverserotate(t_stack_a **lst)
 {
 	t_stack_a	*tmp;
@@ -66,4 +67,42 @@ void    lstswap(t_stack_a **stack)
     (*stack)->index = (*stack)->next->index;
     (*stack)->next->number = tmp;
     (*stack)->next->index = itemp;   
+}
+
+int   find_max(t_stack_a **a)
+{
+    t_stack_a   *tmp;
+    int         max;
+
+    tmp = *a;
+    max = (*a)->index;
+        while (tmp)
+    {
+        if (tmp->index > max)
+            max = tmp->index;
+        tmp = tmp->next;
+    }
+    return (max);
+}
+
+t_position    find_position(t_stack_a **a, int index)
+{
+    t_position  coord;
+    int         pos;
+    t_stack_a   *tmp;
+    int         len;
+
+    tmp = *a;
+    pos = 0;
+    len = ft_lstsize(*a);
+    while (tmp)
+    {
+        if (tmp->index == index)
+            break;
+        pos++;
+        tmp = tmp->next;
+    }
+    coord.top = pos;
+    coord.bot = len - pos;
+    return (coord);
 }

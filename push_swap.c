@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/21 22:31:47 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/22 05:07:45 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,30 +45,35 @@ void print_stack(t_stack_a *stack)
 		tmp = tmp -> next;
 	}
 }
-void sort_stack(t_stack_a **args)
+void sort_stack(t_stack_a **a, t_stack_a **b)
 {
+	// int test;
+	// t_position coord;
+	
 	// t_stack_a *stb;
 
 	// stb = NULL;
-	index_stack(*args);
-	print_stack(*args);
-	if (ft_lstsize(args) == 2)
-		__swap__(&args,'a');
-	else if (ft_lstsize(args) == 3)
-		three_algo(args);
-	// else if (ft_lstsize(args) == 4)
-	// 	four_algo(args);
-	// else if (ft_lstsize(args) == 5)
-	// 	five_algo(args);
+	index_stack(*a);
+	small_algo(a, b);
+	print_stack(*a);
+	// if (ft_lstsize(*a) == 2)
+	// 	__swap__(a,'a');
+	// else if (ft_lstsize(*a) == 3)
+	// 	three_algo(a);
+	// else if (ft_lstsize(*a) <= 5)
+	// 	small_algo(a);
+	// print_stack(*a);
 	// else if (ft_lstsize(args) > 5)
 	// 	big_algo(args);
 }
 
 int	main(int ac, char **av)
 {
-	t_stack_a	*args;
+	t_stack_a	*a;
+	t_stack_a	*b;
 	char		*nums;
 	
+	b = NULL;
 	nums = set_buffer(av);
 	if (ac > 1)
 	{
@@ -77,9 +82,9 @@ int	main(int ac, char **av)
 			free(nums);
 			ft_perror("Error\n");
 		}
-		args = set_stack_a(nums);
-		if (stack_sorted(args))
-			sort_stack(&args);
+		a = set_stack_a(nums);
+		if (stack_sorted(a))
+			sort_stack(&a, &b);
 		// ft_lstclear(&args);
 		free(nums);
 	}
