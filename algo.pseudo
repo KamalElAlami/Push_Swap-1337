@@ -12,19 +12,58 @@ void chunks(void)
     
 
 }
-var1 = 1
-var2 = 2
-var3 = 3
 
-if (var1 > var2 && var2 < var3 && var1 < var3)
-    sa()
-else if (var1 > var2 && var2 > var3 && var1 > var3)
-    sa()
-    rra()
-else if (var1 > var2 && var2 < var3 && var1 > var3)
-    ra()
-else if (var1 < var2 && var2 > var3 && var1 < var3)
-    sa()
-    ra()
-else if (var1 < var2 && var2 > var3 && var1 > var3)
-    rra()
+
+void big_algo(stack a, stack b)
+{
+    t_stack tmp;
+    i = 1
+
+    tmp = a;
+    chunks = ft_lstsize(a) / 5;
+    while (ft_lstsize(a) != 3) // .keep 3 nodes or more but not more than 5
+    {
+        while ()
+        tmp= tmp->next;
+        chunks = i * chunks ;
+        i++;
+    }
+    
+}
+
+
+500 / 5
+= 100
+
+while (i <= 5)
+{
+    i * 100;
+    i++;
+}
+    // seudocode big algo;
+
+fin(a, chunk)
+
+min = 0
+
+while (*a)
+{
+    if(node-)
+}
+
+=================================================
+int count = 0;
+
+int i = 1;
+int chunk = lstsize(*a) / 5; // = 100
+int len = lstsize(*a);
+while (t)
+{
+    chunk = i * chunk;
+    while (count <= chunk && count <= len)
+    {
+        find_min
+        count++;
+    }
+    i++;
+}

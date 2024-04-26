@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 19:59:21 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/22 04:44:29 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/25 02:23:34 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,11 @@ void	lstreverserotate(t_stack_a **lst)
 	{
 		tmp = ft_lstlast(*lst);
         while (i++ < len )
-            prelast = (*lst)->next;
+            prelast = prelast->next;
         prelast->next = NULL;
         tmp->next = *lst;
         *lst = tmp;
 	}
-    
 	return ;
 }
 
@@ -85,6 +84,55 @@ int   find_max(t_stack_a **a)
     return (max);
 }
 
+int find_min_top(t_stack_a **a, int chunk)
+{
+    t_stack_a *tmp;
+    int pos;
+    
+    pos = 0;
+    tmp = *a;
+    while (tmp)
+    {
+        if (tmp->index < chunk)
+            break ;
+        pos++;
+        tmp = tmp->next;
+    }
+    return (pos);
+}
+int find_min_bot(t_stack_a **a, int chunk)
+{
+    t_stack_a *tmp;
+    int pos;
+    int index_pos;
+    
+    pos = 0;
+    tmp = *a;
+    index_pos = -1;
+
+    if (chunk == 6)
+    {
+        while(tmp)
+        {
+            printf("value %d\n" , tmp->index);
+            tmp = tmp->next;
+        }
+    }
+    tmp = *a;
+    while (tmp)
+    {
+        if (tmp->index < chunk)
+        {
+            index_pos = pos;
+        }
+        pos++;
+        tmp = tmp->next;
+    }
+    if ( index_pos != -1)
+        index_pos =  ft_lstsize(*a) - index_pos + 1;
+    return (index_pos);
+}
+
 t_position    find_position(t_stack_a **a, int index)
 {
     t_position  coord;
@@ -95,6 +143,8 @@ t_position    find_position(t_stack_a **a, int index)
     tmp = *a;
     pos = 0;
     len = ft_lstsize(*a);
+
+    
     while (tmp)
     {
         if (tmp->index == index)

@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:07:54 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/22 04:46:25 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/25 01:36:28 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,9 @@ void		index_stack(t_stack_a *args);
 void 		print_stack(t_stack_a *stack);
 int			find_max(t_stack_a **a);
 t_position  find_position(t_stack_a **a, int index);
+int 		find_min_top(t_stack_a **a, int chunk);
+int 		find_min_bot(t_stack_a **a, int chunk);
+
 
 void 		__swap__(t_stack_a **stack, char c);
 void    	__push__(t_stack_a **stack_a, t_stack_a **stack_b, char c);
@@ -66,5 +69,6 @@ void		__reverse_rotate__(t_stack_a **stack, char c);
 
 void    	three_algo(t_stack_a **stack);
 void    	small_algo(t_stack_a **a, t_stack_a **b);
+void		big_algo(t_stack_a **a, t_stack_a **b);
 
 #endif
