@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/25 01:43:09 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/26 09:03:12 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void print_stack(t_stack_a *stack)
 	tmp = stack;
 	while(tmp)
 	{
-		printf("%d",tmp -> number);
+		printf("\n%d",tmp -> number);
 		printf("   index => %d\n",tmp -> index);
 		tmp = tmp -> next;
 	}
@@ -48,7 +48,6 @@ void print_stack(t_stack_a *stack)
 }
 void sort_stack(t_stack_a **a, t_stack_a **b)
 {
-	(void)b;
 	index_stack(*a);
 	// if (ft_lstsize(*a) == 2)
 	// 	__swap__(a,'a');
@@ -58,10 +57,10 @@ void sort_stack(t_stack_a **a, t_stack_a **b)
 		// small_algo(a, b);
 	// else if (ft_lstsize(*a) > 5)
 	big_algo(a, b);
-	printf("=============A=============\n");
-	print_stack(*a);
-	printf("=============B=============\n");
-	print_stack(*b);
+	// printf("=============A=============\n");
+	// print_stack(*a);
+	// printf("=============B=============\n");
+	// print_stack(*b);
 }
 
 int	main(int ac, char **av)

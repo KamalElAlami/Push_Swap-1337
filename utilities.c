@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 19:59:21 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/25 02:23:34 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/26 09:02:03 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,6 @@ int find_min_bot(t_stack_a **a, int chunk)
     {
         while(tmp)
         {
-            printf("value %d\n" , tmp->index);
             tmp = tmp->next;
         }
     }
@@ -155,4 +154,23 @@ t_position    find_position(t_stack_a **a, int index)
     coord.top = pos;
     coord.bot = len - pos;
     return (coord);
+}
+
+int find_max_b(t_stack_a **b)
+{
+    t_stack_a *tmp;
+    int         max;
+    int         pos;
+
+    tmp = *b;
+    max = 0;
+    pos = 1;
+    while (tmp)
+    {
+        if (tmp->index > max)
+            max = pos;
+        pos++;
+        tmp = tmp->next;
+    }
+    return (max);
 }

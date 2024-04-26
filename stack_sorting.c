@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 22:33:17 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/26 03:47:37 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/26 09:05:52 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,44 +82,45 @@ void    small_algo(t_stack_a **a, t_stack_a **b)
     }
 }
 
-void big_algo(t_stack_a **a, t_stack_a **b)
+void a_to_b(t_stack_a **a, t_stack_a **b)
 {
-    int i;
-    int chunk;
-    int chunka;
+    int pos_top;
+    int pos_bot;
     int count;
+    int chunk;
+    int next_chunk;
+    int i;
     int len;
-    int position;
-    int pooos;
 
-    chunk = ft_lstsize(*a) / 5;
-    count = 0;
-    i = 1;
     len = ft_lstsize(*a);
+    count = 0;
+    i = 0;
+    chunk = ft_lstsize(*a) / 5;
+    next_chunk = 0;
     while (*a)
     {
-        chunka = i * chunk;
-        while (count <= chunka && count <= len)
+        next_chunk = i * chunk;
+        while (count <= next_chunk && count <= len)
         {
-            position = find_min_top(a, chunka);
-            pooos = find_min_bot(a, chunka);
-            if (pooos == -1)
+            pos_top = find_min_top(a, next_chunk);
+            pos_bot = find_min_bot(a, next_chunk);
+            if (pos_bot == -1)
                 break;
-            if (position <= pooos)
+            if (pos_top <= pos_bot)
             {
-                while (position)
+                while (pos_top)
                 {
                     __rotate__(a, 'a');
-                    position--;
+                    pos_top--;
                 }
                 __push__(a, b, 'b');
             }
-            else if (position > pooos)
+            else if (pos_top > pos_bot)
             {
-                while (pooos)
+                while (pos_bot)
                 {
                     __reverse_rotate__(a, 'a');
-                    pooos--;
+                    pos_bot--;
                 }
                 __push__(a, b, 'b');
             }
@@ -127,4 +128,49 @@ void big_algo(t_stack_a **a, t_stack_a **b)
         }
         i++;
     }
+}
+
+void b_to_a(t_stack_a **a, t_stack_a **b)
+{
+    int max_pos;
+    int stack_len;
+    int len;
+
+    while (*b)
+    {
+        stack_len = ft_lstsize(*b) / 2;
+        max_pos = find_max_b(b) ;
+        len = ft_lstsize(*b);
+        printf("stack len : %d \n max pos : %d\n", stack_len, max_pos);
+        printf("\n Stack : max pos => %d stack len => %d\n", max_pos, stack_len);
+        if (max_pos <= stack_len)
+        {
+            while (max_pos)
+            {
+                __rotate__(b, 'b');
+                max_pos--;
+            }
+            __push__(b, a, 'a');
+        }
+        if (max_pos > stack_len)
+        {
+            max_pos = len - max_pos ;
+            while (max_pos)
+            {
+                __reverse_rotate__(b, 'b');
+                max_pos--;
+            }
+            __push__(b, a, 'a');
+        }
+        print_stack(*b);
+    }
+}
+
+void big_algo(t_stack_a **a, t_stack_a **b)
+{
+    // (void)b;
+    // printf("\n%d\n", find_max_b(a));
+    a_to_b(a, b);
+    b_to_a(a, b);
+ 
 }
