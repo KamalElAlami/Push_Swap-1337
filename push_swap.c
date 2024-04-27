@@ -6,17 +6,18 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/26 09:03:12 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/27 04:34:22 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 #include "./includes/push_swap.h"
 
-void index_stack(t_stack_a *args)
+void	index_stack(t_stack_a *args)
 {
 	t_stack_a	*head;
 	t_stack_a	*tmp;
+
 	tmp = args;
 	while (tmp)
 	{
@@ -30,33 +31,33 @@ void index_stack(t_stack_a *args)
 		}
 		tmp = tmp->next;
 	}
-	
 }
 
-void print_stack(t_stack_a *stack)
+void	print_stack(t_stack_a *stack)
 {
-	t_stack_a *tmp;
+	t_stack_a	*tmp;
 
 	tmp = stack;
-	while(tmp)
+	while (tmp)
 	{
-		printf("\n%d",tmp -> number);
-		printf("   index => %d\n",tmp -> index);
+		printf("\n%d", tmp -> number);
+		printf("   index => %d\n", tmp -> index);
 		tmp = tmp -> next;
 	}
-	printf("=====================================");
+	printf("=====================================\n");
 }
-void sort_stack(t_stack_a **a, t_stack_a **b)
+
+void	sort_stack(t_stack_a **a, t_stack_a **b)
 {
 	index_stack(*a);
-	// if (ft_lstsize(*a) == 2)
-	// 	__swap__(a,'a');
-	// else if (ft_lstsize(*a) == 3)
-	// 	three_algo(a);
-	// else if (ft_lstsize(*a) <= 5)
-		// small_algo(a, b);
-	// else if (ft_lstsize(*a) > 5)
-	big_algo(a, b);
+	if (ft_lstsize(*a) == 2)
+		__swap__(a, 'a');
+	else if (ft_lstsize(*a) == 3)
+		three_algo(a);
+	else if (ft_lstsize(*a) <= 5)
+		small_algo(a, b);
+	else if (ft_lstsize(*a) > 5)
+		big_algo(a, b);
 	// printf("=============A=============\n");
 	// print_stack(*a);
 	// printf("=============B=============\n");
@@ -68,7 +69,7 @@ int	main(int ac, char **av)
 	t_stack_a	*a;
 	t_stack_a	*b;
 	char		*nums;
-	
+
 	b = NULL;
 	nums = set_buffer(av);
 	if (ac > 1)

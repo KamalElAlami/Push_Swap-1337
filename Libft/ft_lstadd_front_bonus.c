@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 20:41:19 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/20 15:46:00 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/27 04:46:57 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	ft_lstadd_front(t_stack_a **lst, t_stack_a **new)
 {
-	t_stack_a *tmp;
-	
+	t_stack_a	*tmp;
+
 	tmp = *new;
 	if (!lst || !*lst)
 		return ;

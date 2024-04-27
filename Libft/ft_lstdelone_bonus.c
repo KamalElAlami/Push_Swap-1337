@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 20:52:41 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/19 17:53:01 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/27 04:47:55 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 void	ft_lstdelone(t_stack_a **lst)
 {
+	t_stack_a	*tmp;
+
+	tmp = *lst;
 	if (!*lst)
 		return ;
-  t_stack_a *tmp = *lst;
-  *lst = (*lst)->next;
-  free(tmp);
+	*lst = (*lst)->next;
+	free(tmp);
 }

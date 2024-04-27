@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing_utilities.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:06:41 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/15 21:12:19 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/27 04:39:58 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,9 @@ int	check_args(char **args)
 	char	*buffer;
 
 	buffer = set_buffer(args);
-	
-	if (!(ft_isblank(buffer)) && !(extra_operator(buffer)) && !(strange_character(buffer))
-		&& !(check_dup_ints(buffer)) && !(check_overflow(buffer)))
+	if (!(ft_isblank(buffer)) && !(extra_operator(buffer))
+		&& !(strange_character(buffer)) && !(check_dup_ints(buffer))
+		&& !(check_overflow(buffer)))
 	{
 		free(buffer);
 		return (0);

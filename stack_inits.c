@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 18:06:30 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/20 15:53:50 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/27 04:45:44 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,19 @@ t_stack_a	*set_stack_a(char *nums)
 		i++;
 	}
 	ft_free_array(numbers);
-	
 	return (head);
 }
 
-int stack_sorted(t_stack_a *args)
+int	stack_sorted(t_stack_a *args)
 {
-    t_stack_a *tmp;
-    
-    tmp = args;
-    while (tmp)
-    {
-        if (tmp->next && tmp->number > tmp->next->number )
-            return (1);
-        tmp = tmp->next;
-    }
-    return (0);
+	t_stack_a	*tmp;
+
+	tmp = args;
+	while (tmp)
+	{
+		if (tmp->next && tmp->number > tmp->next->number)
+			return (1);
+		tmp = tmp->next;
+	}
+	return (0);
 }
