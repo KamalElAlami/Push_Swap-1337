@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utilities.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 19:59:21 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/27 04:44:18 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/28 22:21:32 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	lstreverserotate(t_stack_a **lst)
 	int			len;
 	int			i;
 
-	i = 0;
+	i = 1;
 	prelast = *lst;
 	len = ft_lstsize(*lst) - 1;
 	if (!lst || !*lst)
@@ -84,6 +84,21 @@ int	find_max(t_stack_a **a)
 	}
 	return (max);
 }
+int	find_min(t_stack_a **a)
+{
+	t_stack_a	*tmp;
+	int			min;
+
+	tmp = *a;
+	min = (*a)->index;
+	while (tmp)
+	{
+		if (tmp->index < min)
+			min = tmp->index;
+		tmp = tmp->next;
+	}
+	return (min);
+}
 
 int	find_min_top(t_stack_a **a, int chunk)
 {
@@ -92,6 +107,8 @@ int	find_min_top(t_stack_a **a, int chunk)
 
 	pos = 0;
 	tmp = *a;
+	
+	
 	while (tmp)
 	{
 		if (tmp->index < chunk)
@@ -110,14 +127,9 @@ int	find_min_bot(t_stack_a **a, int chunk)
 	pos = 0;
 	tmp = *a;
 	index_pos = -1;
-	if (chunk == 6)
-	{
-		while (tmp)
-		{
-			tmp = tmp->next;
-		}
-	}
-	tmp = *a;
+	
+	if (!tmp)
+		return -1;
 	while (tmp)
 	{
 		if (tmp->index < chunk)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/27 04:34:22 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/28 22:27:49 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	print_stack(t_stack_a *stack)
 		printf("   index => %d\n", tmp -> index);
 		tmp = tmp -> next;
 	}
-	printf("=====================================\n");
+	// printf("=====================================\n");
 }
 
 void	sort_stack(t_stack_a **a, t_stack_a **b)

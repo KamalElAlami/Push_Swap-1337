@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_sorting.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 22:33:17 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/27 04:37:33 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/28 22:42:15 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,21 +48,21 @@ void	small_algo(t_stack_a **a, t_stack_a **b)
 {
 	t_position	coord;
 	int			len;
-	int			max;
+	int			min;
 
 	len = ft_lstsize(*a);
 	while (ft_lstsize(*a) > 3)
 	{
-		max = find_max(a);
-		coord = find_position(a, max);
+		min = find_min(a);
+		coord = find_position(a, min);
 		if (coord.top >= coord.bot)
 		{
-			while ((*a)->index != max)
+			while ((*a)->index != min)
 				__reverse_rotate__(a, 'a');
 		}
 		else
 		{
-			while ((*a)->index != max)
+			while ((*a)->index != min)
 				__rotate__(a, 'a');
 		}
 		__push__(a, b, 'b');
@@ -70,25 +70,16 @@ void	small_algo(t_stack_a **a, t_stack_a **b)
 	three_algo(a);
 	while (*b)
 		__push__(b, a, 'a');
-	if (len == 4)
-		__rotate__(a, 'a');
-	else if (len == 5)
-	{
-		__swap__(a, 'a');
-		__rotate__(a, 'a');
-		__rotate__(a, 'a');
-	}
 }
 
 void	a_to_b(t_stack_a **a, t_stack_a **b)
 {
-	int		pos_top;
-	int		pos_bot;
 	int		count;
 	int		chunk;
 	int		next_chunk;
 	int		i;
 	int		len;
+	int		middle;
 
 	len = ft_lstsize(*a);
 	count = 0;
@@ -98,29 +89,19 @@ void	a_to_b(t_stack_a **a, t_stack_a **b)
 	while (*a)
 	{
 		next_chunk = i * chunk;
+		middle = next_chunk - (chunk / 2);
 		while (count <= next_chunk && count <= len)
 		{
-			pos_top = find_min_top(a, next_chunk);
-			pos_bot = find_min_bot(a, next_chunk);
-			if (pos_bot == -1)
-				break ;
-			if (pos_top <= pos_bot)
+			while (find_min_bot(a , next_chunk) != -1)
 			{
-				while (pos_top)
+				if ((*a)->index < next_chunk)
 				{
+					__push__(a, b, 'b');
+					if ( a && *a &&  (*a)->index < middle && ft_lstsize(*b) > 2)
+						__rotate__(b, 'b');
+				}
+				else if (a && *a &&  ft_lstsize(*a) > 1)
 					__rotate__(a, 'a');
-					pos_top--;
-				}
-				__push__(a, b, 'b');
-			}
-			else if (pos_top > pos_bot)
-			{
-				while (pos_bot)
-				{
-					__reverse_rotate__(a, 'a');
-					pos_bot--;
-				}
-				__push__(a, b, 'b');
 			}
 			count++;
 		}
@@ -170,5 +151,5 @@ void	b_to_a(t_stack_a **a, t_stack_a **b)
 void	big_algo(t_stack_a **a, t_stack_a **b)
 {
 	a_to_b(a, b);
-	b_to_a(a, b);
+	// b_to_a(a, b);
 }
