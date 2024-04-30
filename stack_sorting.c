@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 22:33:17 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/28 22:42:15 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/04/30 23:52:25 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,12 +80,16 @@ void	a_to_b(t_stack_a **a, t_stack_a **b)
 	int		i;
 	int		len;
 	int		middle;
+	int		predict_min;
 
 	len = ft_lstsize(*a);
 	count = 0;
 	i = 0;
-	chunk = ft_lstsize(*a) / 5;
 	next_chunk = 0;
+	if (ft_lstsize(*a) >= 350)
+		chunk = ft_lstsize(*a) / 9;
+	else
+		chunk = ft_lstsize(*a) / 5;
 	while (*a)
 	{
 		next_chunk = i * chunk;
@@ -95,13 +99,23 @@ void	a_to_b(t_stack_a **a, t_stack_a **b)
 			while (find_min_bot(a , next_chunk) != -1)
 			{
 				if ((*a)->index < next_chunk)
-				{
 					__push__(a, b, 'b');
-					if ( a && *a &&  (*a)->index < middle && ft_lstsize(*b) > 2)
+				predict_min = find_min_bot(a, next_chunk);
+				if (predict_min != -1 )
+				{
+					
+					if (a && *a && b && *b && find_min_top(a , next_chunk) != 0  &&  (*b)->index < middle &&  ft_lstsize(*b) > 2 && ft_lstsize(*a) > 2)
+						__rr__(a , b);
+					else if (a && *a &&  (*a)->index >= next_chunk && ft_lstsize(*a) > 2)
+						__rotate__(a, 'a');
+					else if (b && *b && (*b)->index < middle && ft_lstsize(*b) > 2)
 						__rotate__(b, 'b');
 				}
-				else if (a && *a &&  ft_lstsize(*a) > 1)
-					__rotate__(a, 'a');
+				else
+				{
+					if (b && *b && (*b)->index < middle && ft_lstsize(*b) > 2)
+						__rotate__(b, 'b');
+				}
 			}
 			count++;
 		}
@@ -151,5 +165,5 @@ void	b_to_a(t_stack_a **a, t_stack_a **b)
 void	big_algo(t_stack_a **a, t_stack_a **b)
 {
 	a_to_b(a, b);
-	// b_to_a(a, b);
+	b_to_a(a, b);
 }
