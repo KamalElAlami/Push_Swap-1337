@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/28 22:27:49 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/02 23:54:37 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	print_stack(t_stack_a *stack)
 		printf("   index => %d\n", tmp -> index);
 		tmp = tmp -> next;
 	}
-	// printf("=====================================\n");
 }
 
 void	sort_stack(t_stack_a **a, t_stack_a **b)
@@ -60,8 +59,6 @@ void	sort_stack(t_stack_a **a, t_stack_a **b)
 		big_algo(a, b);
 	// printf("=============A=============\n");
 	// print_stack(*a);
-	// printf("=============B=============\n");
-	// print_stack(*b);
 }
 
 int	main(int ac, char **av)

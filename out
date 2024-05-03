@@ -1,17 +1,803 @@
-pb
+chunk = 20  next_chunk = 20 middle = 10  a  =24  
+a = 24
 ra
+chunk = 20  next_chunk = 20 middle = 10  a  =36  
+a = 36
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =70  
+a = 70
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =1
 pb
-rra
-rra
+a = 12
+chunk = 20  next_chunk = 20 middle = 10  a  =12  
 pb
+a = 74
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =18  
 pb
+a = 29
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =4  
 pb
+a = 23
+rr
+chunk = 20  next_chunk = 20 middle = 10  a  =28  
+a = 28
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =21 
+a = 21
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =48  
+a = 48
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =47  
+a = 47
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =52  
+a = 52
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =35  
+a = 35
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =9 
 pb
-rrb
-rrb
-rrb
-pa
-pa
-rrb
-pa
-pa
+a = 77
+rr
+chunk = 20  next_chunk = 20 middle = 10  a  =56  
+a = 56
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =90  
+a = 90
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =94  
+a = 94
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =26  
+a = 26
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =2  
+pb
+a = 51
+rr
+chunk = 20  next_chunk = 20 middle = 10  a  =16  
+pb
+a = 60
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =49  
+a = 49
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =46  
+a = 46
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =11  
+pb
+a = 50
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =91  
+a = 91
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =6  
+pb
+a = 45
+rr
+chunk = 20  next_chunk = 20 middle = 10  a  =8  
+pb
+a = 93
+rr
+chunk = 20  next_chunk = 20 middle = 10  a  =31  
+a = 31
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =82  
+a = 82
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =95  
+a = 95
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =53  
+a = 53
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =92  
+a = 92
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =14  
+pb
+a = 83
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =37  
+a = 37
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =69  
+a = 69
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =75  
+a = 75
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =86  
+a = 86
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =40  
+a = 40
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =5  
+pb
+a = 30
+rr
+chunk = 20  next_chunk = 20 middle = 10  a  =73  
+a = 73
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =13  
+pb
+a = 39
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =63  
+a = 63
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =85  
+a = 85
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =98  
+a = 98
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =55  
+a = 55
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =33  
+a = 33
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =72  
+a = 72
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =65  
+a = 65
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =38  
+a = 38
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =0  
+pb
+a = 96
+rr
+chunk = 20  next_chunk = 20 middle = 10  a  =80  
+a = 80
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =54  
+a = 54
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =41  
+a = 41
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =25  
+a = 25
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =58  
+a = 58
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =67  
+a = 67
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =68  
+a = 68
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =15  
+pb
+a = 59
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =20  
+a = 20
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =89  
+a = 89
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =42  
+a = 42
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =87  
+a = 87
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =17  
+pb
+a = 78
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =81  
+a = 81
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =7  
+pb
+a = 64
+rr
+chunk = 20  next_chunk = 20 middle = 10  a  =88  
+a = 88
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =34  
+a = 34
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =10  
+pb
+a = 76
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =99  
+a = 99
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =97  
+a = 97
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =84  
+a = 84
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =66  
+a = 66
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =19  
+pb
+a = 32
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =57  
+a = 57
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =44  
+a = 44
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =22  
+a = 22
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =79  
+a = 79
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =27  
+a = 27
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =71  
+a = 71
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =43  
+a = 43
+ra
+chunk = 20  next_chunk = 20 middle = 10  a  =3  
+pb
+a = 62
+rb
+chunk = 20  next_chunk = 40 middle = 30  a  =62  
+a = 62
+rr
+chunk = 20  next_chunk = 40 middle = 30  a  =61  
+a = 61
+rr
+chunk = 20  next_chunk = 40 middle = 30  a  =24  
+pb
+a = 36
+rb
+chunk = 20  next_chunk = 40 middle = 30  a  =36  
+pb
+a = 70
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =74  
+a = 74
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =29  
+pb
+a = 23
+rb
+chunk = 20  next_chunk = 40 middle = 30  a  =23  
+pb
+a = 28
+rb
+chunk = 20  next_chunk = 40 middle = 30  a  =28  
+pb
+a = 21
+rb
+chunk = 20  next_chunk = 40 middle = 30  a  =21  
+pb
+a = 48
+rr
+chunk = 20  next_chunk = 40 middle = 30  a  =47  
+a = 47
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =52  
+a = 52
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =35  
+pb
+a = 77
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =56  
+a = 56
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =90  
+a = 90
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =94  
+a = 94
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =26  
+pb
+a = 51
+rr
+chunk = 20  next_chunk = 40 middle = 30  a  =60  
+a = 60
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =49  
+a = 49
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =46  
+a = 46
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =50  
+a = 50
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =91  
+a = 91
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =45  
+a = 45
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =93  
+a = 93
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =31  
+pb
+a = 82
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =95  
+a = 95
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =53  
+a = 53
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =92  
+a = 92
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =83  
+a = 83
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =37  
+pb
+a = 69
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =75  
+a = 75
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =86  
+a = 86
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =40  
+a = 40
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =30  
+pb
+a = 73
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =39  
+pb
+a = 63
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =85  
+a = 85
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =98  
+a = 98
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =55  
+a = 55
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =33  
+pb
+a = 72
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =65  
+a = 65
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =38  
+pb
+a = 96
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =80  
+a = 80
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =54  
+a = 54
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =41  
+a = 41
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =25  
+pb
+a = 58
+rr
+chunk = 20  next_chunk = 40 middle = 30  a  =67  
+a = 67
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =68  
+a = 68
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =59  
+a = 59
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =20  
+pb
+a = 89
+rr
+chunk = 20  next_chunk = 40 middle = 30  a  =42  
+a = 42
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =87  
+a = 87
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =78  
+a = 78
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =81  
+a = 81
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =64  
+a = 64
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =88  
+a = 88
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =34  
+pb
+a = 76
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =99  
+a = 99
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =97  
+a = 97
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =84  
+a = 84
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =66  
+a = 66
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =32  
+pb
+a = 57
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =44  
+a = 44
+ra
+chunk = 20  next_chunk = 40 middle = 30  a  =22  
+pb
+a = 79
+rr
+chunk = 20  next_chunk = 40 middle = 30  a  =27  
+pb
+a = 71
+rb
+chunk = 20  next_chunk = 60 middle = 50  a  =71  
+a = 71
+rr
+chunk = 20  next_chunk = 60 middle = 50  a  =43  
+pb
+a = 62
+rr
+chunk = 20  next_chunk = 60 middle = 50  a  =61  
+a = 61
+rr
+chunk = 20  next_chunk = 60 middle = 50  a  =70  
+a = 70
+rr
+chunk = 20  next_chunk = 60 middle = 50  a  =74  
+a = 74
+rr
+chunk = 20  next_chunk = 60 middle = 50  a  =48  
+pb
+a = 47
+rb
+chunk = 20  next_chunk = 60 middle = 50  a  =47  
+pb
+a = 52
+rb
+chunk = 20  next_chunk = 60 middle = 50  a  =52  
+pb
+a = 77
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =56  
+pb
+a = 90
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =94  
+a = 94
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =51  
+pb
+a = 60
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =49  
+pb
+a = 46
+rb
+chunk = 20  next_chunk = 60 middle = 50  a  =46  
+pb
+a = 50
+rb
+chunk = 20  next_chunk = 60 middle = 50  a  =50  
+pb
+a = 91
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =45  
+pb
+a = 93
+rr
+chunk = 20  next_chunk = 60 middle = 50  a  =82  
+a = 82
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =95  
+a = 95
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =53  
+pb
+a = 92
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =83  
+a = 83
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =69  
+a = 69
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =75  
+a = 75
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =86  
+a = 86
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =40  
+pb
+a = 73
+rr
+chunk = 20  next_chunk = 60 middle = 50  a  =63  
+a = 63
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =85  
+a = 85
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =98  
+a = 98
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =55  
+pb
+a = 72
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =65  
+a = 65
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =96  
+a = 96
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =80  
+a = 80
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =54  
+pb
+a = 41
+chunk = 20  next_chunk = 60 middle = 50  a  =41  
+pb
+a = 58
+rb
+chunk = 20  next_chunk = 60 middle = 50  a  =58  
+pb
+a = 67
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =68  
+a = 68
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =59  
+pb
+a = 89
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =42  
+pb
+a = 87
+rr
+chunk = 20  next_chunk = 60 middle = 50  a  =78  
+a = 78
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =81  
+a = 81
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =64  
+a = 64
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =88  
+a = 88
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =76  
+a = 76
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =99  
+a = 99
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =97  
+a = 97
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =84  
+a = 84
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =66  
+a = 66
+ra
+chunk = 20  next_chunk = 60 middle = 50  a  =57  
+pb
+a = 44
+chunk = 20  next_chunk = 60 middle = 50  a  =44  
+pb
+a = 79
+rb
+chunk = 20  next_chunk = 80 middle = 70  a  =79  
+pb
+a = 71
+chunk = 20  next_chunk = 80 middle = 70  a  =71  
+pb
+a = 62
+chunk = 20  next_chunk = 80 middle = 70  a  =62  
+pb
+a = 61
+rb
+chunk = 20  next_chunk = 80 middle = 70  a  =61  
+pb
+a = 70
+rb
+chunk = 20  next_chunk = 80 middle = 70  a  =70  
+pb
+a = 74
+chunk = 20  next_chunk = 80 middle = 70  a  =74  
+pb
+a = 77
+chunk = 20  next_chunk = 80 middle = 70  a  =77  
+pb
+a = 90
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =94  
+a = 94
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =60  
+pb
+a = 91
+rr
+chunk = 20  next_chunk = 80 middle = 70  a  =93  
+a = 93
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =82  
+a = 82
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =95  
+a = 95
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =92  
+a = 92
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =83  
+a = 83
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =69  
+pb
+a = 75
+rb
+chunk = 20  next_chunk = 80 middle = 70  a  =75  
+pb
+a = 86
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =73  
+pb
+a = 63
+chunk = 20  next_chunk = 80 middle = 70  a  =63  
+pb
+a = 85
+rr
+chunk = 20  next_chunk = 80 middle = 70  a  =98  
+a = 98
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =72  
+pb
+a = 65
+chunk = 20  next_chunk = 80 middle = 70  a  =65  
+pb
+a = 96
+rr
+chunk = 20  next_chunk = 80 middle = 70  a  =80 
+a = 80
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =67
+pb
+a = 68
+rb
+chunk = 20  next_chunk = 80 middle = 70  a  =68  
+pb
+a = 89
+rr
+chunk = 20  next_chunk = 80 middle = 70  a  =87  
+a = 87
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =78  
+pb
+a = 81
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =64  
+pb
+a = 88
+rr
+chunk = 20  next_chunk = 80 middle = 70  a  =76  
+pb
+a = 99
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =97  
+a = 97
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =84 
+a = 84
+ra
+chunk = 20  next_chunk = 80 middle = 70  a  =66  
+pb
+a = 90
+rb
+chunk = 20  next_chunk = 100 middle = 90  a  =90 
+pb
+a = 94
+chunk = 20  next_chunk = 100 middle = 90  a  =94  
+pb
+a = 91
+chunk = 20  next_chunk = 100 middle = 90  a  =91  
+pb
+a = 93
+chunk = 20  next_chunk = 100 middle = 90  a  =93  
+pb
+a = 82
+chunk = 20  next_chunk = 100 middle = 90  a  =82  
+pb
+a = 95
+rb
+chunk = 20  next_chunk = 100 middle = 90  a  =95 
+pb
+a = 92
+chunk = 20  next_chunk = 100 middle = 90  a  =92  
+pb
+a = 83
+chunk = 20  next_chunk = 100 middle = 90  a  =83  
+pb
+a = 86
+rb
+chunk = 20  next_chunk = 100 middle = 90  a  =86  
+pb
+a = 85
+rb
+chunk = 20  next_chunk = 100 middle = 90  a  =85  
+pb
+a = 98
+rb
+chunk = 20  next_chunk = 100 middle = 90  a  =98  
+pb
+a = 96
+chunk = 20  next_chunk = 100 middle = 90  a  =96  
+pb
+a = 80
+chunk = 20  next_chunk = 100 middle = 90  a  =80  
+pb
+a = 89
+rb
+chunk = 20  next_chunk = 100 middle = 90  a  =89  
+pb
+a = 87
+rb
+chunk = 20  next_chunk = 100 middle = 90  a  =87  
+pb
+a = 81
+rb
+chunk = 20  next_chunk = 100 middle = 90  a  =81  
+pb
+a = 88
+rb
+chunk = 20  next_chunk = 100 middle = 90  a  =88  
+pb
+a = 99
+rb
+chunk = 20  next_chunk = 100 middle = 90  a  =99  
+pb
+a = 97
+chunk = 20  next_chunk = 100 middle = 90  a  =97  
+pb
+a = 84
+chunk = 20  next_chunk = 100 middle = 90  a  =84  
+pb
+rb

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+         #
+#    By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 16:30:49 by kael-ala          #+#    #+#              #
-#    Updated: 2024/04/22 04:53:13 by kael-ala         ###   ########.fr        #
+#    Updated: 2024/05/02 23:15:15 by kael-ala         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ FILES = ./ft_printf/ft_printf.c ./ft_printf/printtools.c ./ft_printf/printtoolss
 	./Libft/ft_tolower.c ./Libft/ft_toupper.c ./Libft/ft_memmove.c ./Libft/ft_split.c \
 	./Libft/ft_substr.c ./Libft/ft_lstadd_front_bonus.c ./Libft/ft_lstnew_bonus.c ./Libft/ft_lstsize_bonus.c ./Libft/ft_lstlast_bonus.c ./Libft/ft_lstadd_back_bonus.c ./Libft/ft_lstdelone_bonus.c ./Libft/ft_lstclear_bonus.c ./Libft/ft_lstiter_bonus.c
 
-CFILES = push_swap.c args_parsing.c parsing_utilities.c stack_inits.c helpers.c stack_operations.c utilities.c stack_sorting.c
+CFILES = push_swap.c args_parsing.c parsing_utilities.c stack_inits.c helpers.c stack_operations.c utilities.c stack_sorting.c stack_operations_aio.c
 
 
 INCS = ./includes/ft_printf.h ./includes/push_swap.h ./includes/libft.h 

@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:07:54 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/28 22:40:56 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/02 23:34:25 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,19 +56,20 @@ t_stack_a	*set_stack_a(char *nums);
 int 		stack_sorted(t_stack_a *args);
 void		index_stack(t_stack_a *args);
 void 		print_stack(t_stack_a *stack);
-int			find_max(t_stack_a **a);
 int			find_min(t_stack_a **a);
+int			find_pre_max(t_stack_a **b);
 t_position  find_position(t_stack_a **a, int index);
 int 		find_min_top(t_stack_a **a, int chunk);
 int 		find_min_bot(t_stack_a **a, int chunk);
 int 		find_max_b(t_stack_a **b);
+int			find_max(t_stack_a **b);
 
 
 void 		__swap__(t_stack_a **stack, char c);
 void    	__push__(t_stack_a **stack_a, t_stack_a **stack_b, char c);
 void		__rotate__(t_stack_a **stack, char c);
 void		__reverse_rotate__(t_stack_a **stack, char c);
-void	__rr__(t_stack_a **stack_a, t_stack_a **stack_b);
+void		__rr__(t_stack_a **stack_a, t_stack_a **stack_b);
 
 void    	three_algo(t_stack_a **stack);
 void    	small_algo(t_stack_a **a, t_stack_a **b);

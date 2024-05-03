@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 22:51:53 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/15 18:24:46 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/02 08:12:20 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@ int	extra_operator(char *buffer)
 	i = 0;
 	while (buffer[i])
 	{
-		if(ft_strchr("-+",buffer[i]) && !ft_isdigit(buffer[i+1]))
-			return(1);
-		if(ft_strchr("-+",buffer[i]) && ft_isdigit(buffer[i-1]) && ft_isdigit(buffer[i+1]))
-			return(1);
+		if (ft_strchr("-+", buffer[i]) && !ft_isdigit(buffer[i + 1]))
+			return (1);
+		if (ft_strchr("-+", buffer[i]) && ft_isdigit(buffer[i - 1])
+			&& ft_isdigit(buffer[i + 1]))
+			return (1);
 		i++;
 	}
 	return (0);

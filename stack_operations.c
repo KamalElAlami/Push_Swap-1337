@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_operations.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 21:32:14 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/27 04:39:14 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/02 08:10:51 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,24 +48,4 @@ void	__reverse_rotate__(t_stack_a **stack, char c)
 		ft_printf("rra\n");
 	if (c == 'b')
 		ft_printf("rrb\n");
-}
-
-void	__ss__(t_stack_a **stack_a, t_stack_a **stack_b)
-{
-	lstswap(stack_a);
-	lstswap(stack_b);
-	ft_printf("ss\n");
-}
-void	__rr__(t_stack_a **stack_a, t_stack_a **stack_b)
-{
-	lstrotate(stack_a);
-	lstrotate(stack_b);
-	ft_printf("rr\n");
-}
-
-void	__rrr__(t_stack_a **stack_a, t_stack_a **stack_b)
-{
-	lstreverserotate(stack_a);
-	lstreverserotate(stack_b);
-	ft_printf("rrr\n");
 }

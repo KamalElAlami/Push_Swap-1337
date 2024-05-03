@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 19:59:21 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/04/28 22:21:32 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/02 23:53:26 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,21 +69,17 @@ void	lstswap(t_stack_a **stack)
 	(*stack)->next->index = itemp;
 }
 
-int	find_max(t_stack_a **a)
+int	find_pre_max(t_stack_a **b)
 {
-	t_stack_a	*tmp;
-	int			max;
+	int			pre_max;
 
-	tmp = *a;
-	max = (*a)->index;
-	while (tmp)
-	{
-		if (tmp->index > max)
-			max = tmp->index;
-		tmp = tmp->next;
-	}
-	return (max);
+
+	pre_max = ft_lstsize(*b) - 2;
+	if (ft_lstsize(*b) == 1)
+		pre_max = 0;	
+	return (pre_max);
 }
+
 int	find_min(t_stack_a **a)
 {
 	t_stack_a	*tmp;
@@ -98,96 +94,4 @@ int	find_min(t_stack_a **a)
 		tmp = tmp->next;
 	}
 	return (min);
-}
-
-int	find_min_top(t_stack_a **a, int chunk)
-{
-	t_stack_a	*tmp;
-	int			pos;
-
-	pos = 0;
-	tmp = *a;
-	
-	
-	while (tmp)
-	{
-		if (tmp->index < chunk)
-			break ;
-		pos++;
-		tmp = tmp->next;
-	}
-	return (pos);
-}
-int	find_min_bot(t_stack_a **a, int chunk)
-{
-	t_stack_a	*tmp;
-	int			pos;
-	int			index_pos;
-
-	pos = 0;
-	tmp = *a;
-	index_pos = -1;
-	
-	if (!tmp)
-		return -1;
-	while (tmp)
-	{
-		if (tmp->index < chunk)
-		{
-			index_pos = pos;
-		}
-		pos++;
-		tmp = tmp->next;
-	}
-	if (index_pos != -1)
-		index_pos = ft_lstsize(*a) - index_pos + 1;
-	return (index_pos);
-}
-
-t_position	find_position(t_stack_a **a, int index)
-{
-	t_position	coord;
-	int			pos;
-	t_stack_a	*tmp;
-	int			len;
-
-	tmp = *a;
-	pos = 0;
-	len = ft_lstsize(*a);
-	while (tmp)
-	{
-		if (tmp->index == index)
-			break ;
-		pos++;
-		tmp = tmp->next;
-	}
-	coord.top = pos;
-	coord.bot = len - pos;
-	return (coord);
-}
-
-int	find_max_b(t_stack_a **b)
-{
-	t_stack_a	*tmp;
-	int			max;
-	int			pos;
-	int			max_pos;
-
-	tmp = *b;
-	max = 0;
-	max_pos = 0;
-	pos = 1;
-	if (!*b)
-		return (0);
-	while (tmp)
-	{
-		if (tmp->index > max)
-		{
-			max = tmp->index;
-			max_pos = pos;
-		}
-		pos++;
-		tmp = tmp->next;
-	}
-	return (max_pos);
 }
