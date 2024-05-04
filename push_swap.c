@@ -3,15 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/04 00:31:43 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/04 15:04:38 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 #include "./includes/push_swap.h"
+
+void	small_algo(t_stack_a **a, t_stack_a **b)
+{
+	t_position	coord;
+	int			min;
+
+	while (ft_lstsize(*a) > 3)
+	{
+		min = find_min(a);
+		coord = find_position(a, min);
+		if (coord.top >= coord.bot)
+		{
+			while ((*a)->index != min)
+				__reverse_rotate__(a, 'a');
+		}
+		else
+		{
+			while ((*a)->index != min)
+				__rotate__(a, 'a');
+		}
+		__push__(a, b, 'b');
+	}
+	three_algo(a);
+	while (*b)
+		__push__(b, a, 'a');
+}
 
 void	index_stack(t_stack_a *args)
 {
@@ -33,19 +59,6 @@ void	index_stack(t_stack_a *args)
 	}
 }
 
-void	print_stack(t_stack_a *stack)
-{
-	t_stack_a	*tmp;
-
-	tmp = stack;
-	while (tmp)
-	{
-		printf("\n%d", tmp -> number);
-		printf("   index => %d\n", tmp -> index);
-		tmp = tmp -> next;
-	}
-}
-
 void	sort_stack(t_stack_a **a, t_stack_a **b)
 {
 	index_stack(*a);
@@ -60,7 +73,6 @@ void	sort_stack(t_stack_a **a, t_stack_a **b)
 		a_to_b(a, b);
 		b_to_a(a, b);
 	}
-	print_stack(*a);
 }
 
 int	main(int ac, char **av)

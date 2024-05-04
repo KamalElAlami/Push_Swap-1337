@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:07:54 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/04 00:05:09 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/04 14:07:58 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,14 @@ typedef struct t_position
 	int	top;
 	int	bot;
 }	t_position;
+
+typedef struct t_chunks
+{
+	int tmp;
+	int	chunk;
+	int incre;
+	int	mid;
+}	t_chunks;
 
 typedef struct t_stack_a
 {

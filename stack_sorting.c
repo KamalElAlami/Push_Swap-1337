@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_sorting.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 22:33:17 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/04 00:43:35 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/04 15:06:08 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,48 +44,22 @@ void	three_algo(t_stack_a **stack)
 		__reverse_rotate__(stack, 'a');
 }
 
-void	small_algo(t_stack_a **a, t_stack_a **b)
+void	predict_to_push(t_stack_a **a, t_stack_a **b, int next_chunk, int chunk, int middle)
 {
-	t_position	coord;
-	int			min;
-
-	while (ft_lstsize(*a) > 3)
-	{
-		min = find_min(a);
-		coord = find_position(a, min);
-		if (coord.top >= coord.bot)
-		{
-			while ((*a)->index != min)
-				__reverse_rotate__(a, 'a');
-		}
-		else
-		{
-			while ((*a)->index != min)
-				__rotate__(a, 'a');
-		}
-		__push__(a, b, 'b');
-	}
-	three_algo(a);
-	while (*b)
-		__push__(b, a, 'a');
-}
-
-void	predict_to_push(t_stack_a **a, t_stack_a **b, int next_chunk, int chunk)
-{
-	int		middle;
 	int		predict_min;
 
-	middle = next_chunk - (chunk / 2);
 	predict_min = find_min_bot(a, next_chunk);
 	if (predict_min != -1)
 	{
 		if (*a && *b && find_min_top(a, next_chunk) != 0
 			&& (*a)->index >= next_chunk && (*b)->index < middle
-			&& (*b)->index > (next_chunk - chunk) && ft_lstsize(*b) >= 2 && ft_lstsize(*a) >= 2)
+			&& (*b)->index > (next_chunk - chunk - 1) && ft_lstsize(*b) >= 2
+			&& ft_lstsize(*a) >= 2)
 			__rr__(a, b);
 		else if ((*a)->index >= next_chunk && ft_lstsize(*a) >= 2)
 			__rotate__(a, 'a');
-		else if ((*b)->index < middle && (*b)->index > (next_chunk - chunk) && ft_lstsize(*b) >= 2)
+		else if ((*b)->index < middle && (*b)->index > (next_chunk - chunk - 1)
+			&& ft_lstsize(*b) >= 2)
 			__rotate__(b, 'b');
 	}
 	else
@@ -93,44 +67,41 @@ void	predict_to_push(t_stack_a **a, t_stack_a **b, int next_chunk, int chunk)
 			__rotate__(b, 'b');
 }
 
-int	chunk_size(t_stack_a **a)
+void	chunk_size(t_stack_a **a, t_chunks *inf)
 {
-	int	chunk;
-
-	chunk = 0;
-	if (ft_lstsize(*a) >= 150)
-		chunk = ft_lstsize(*a) / 8;
-	else
-		chunk = ft_lstsize(*a) / 5;
-	return (chunk);
+	inf->tmp = inf->chunk;
+	if (ft_lstsize(*a) <= 100)
+		inf->incre = 20;
+	else if (ft_lstsize(*a) <= 250 && ft_lstsize(*a) > 100)
+		inf->incre = 35;
+	
+	inf->chunk = inf->chunk + inf->incre;
+	inf->mid = inf->tmp + inf->incre / 2;
 }
 
 void	a_to_b(t_stack_a **a, t_stack_a **b)
 {
 	int		count;
-	int		chunk;
-	int		next_chunk;
-	int		i;
 	int		len;
+	t_chunks inf;
 
 	len = ft_lstsize(*a);
-	count = 0;
-	i = 0;
-	chunk = chunk_size(a);
+	inf.incre = 55;
+	inf.chunk = -1;
 	while (*a)
 	{
-		next_chunk = i * chunk;
-		while (count <= next_chunk && count <= len)
+		count = 0;
+		chunk_size(a, &inf);
+		while (count <= inf.chunk && count <= len)
 		{
-			while (find_min_bot(a, next_chunk) != -1)
+			while (find_min_bot(a, inf.chunk) != -1)
 			{
-				if ((*a)->index < next_chunk)
+				if ((*a)->index < inf.chunk)
 					__push__(a, b, 'b');
-				predict_to_push(a, b, next_chunk, chunk);
+				predict_to_push(a, b, inf.chunk, inf.incre, inf.mid);
 			}
 			count++;
 		}
-		i++;
 	}
 }
 
