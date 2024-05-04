@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_inits.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 18:06:30 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/02 23:11:25 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/04 00:30:50 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ int	find_max_b(t_stack_a **b)
 	}
 	return (max_pos);
 }
+
 int	find_max(t_stack_a **b)
 {
 	t_stack_a	*tmp;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utilities.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 19:59:21 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/02 23:53:26 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/04 00:01:08 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,9 @@ int	find_pre_max(t_stack_a **b)
 {
 	int			pre_max;
 
-
 	pre_max = ft_lstsize(*b) - 2;
 	if (ft_lstsize(*b) == 1)
-		pre_max = 0;	
+		pre_max = 0;
 	return (pre_max);
 }
 

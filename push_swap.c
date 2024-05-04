@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/03 14:36:09 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/04 00:31:43 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,11 @@ void	sort_stack(t_stack_a **a, t_stack_a **b)
 	else if (ft_lstsize(*a) <= 5)
 		small_algo(a, b);
 	else if (ft_lstsize(*a) > 5)
-		big_algo(a, b);
-	// printf("=============A=============\n");
-	// print_stack(*a);
+	{
+		a_to_b(a, b);
+		b_to_a(a, b);
+	}
+	print_stack(*a);
 }
 
 int	main(int ac, char **av)
@@ -79,7 +81,8 @@ int	main(int ac, char **av)
 		a = set_stack_a(nums);
 		if (stack_sorted(a))
 			sort_stack(&a, &b);
-		// ft_lstclear(&args);
+		ft_lstclear(&a);
+		ft_lstclear(&b);
 		free(nums);
 	}
 	else
