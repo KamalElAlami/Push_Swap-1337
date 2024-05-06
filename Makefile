@@ -6,7 +6,7 @@
 #    By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 16:30:49 by kael-ala          #+#    #+#              #
-#    Updated: 2024/05/02 23:15:15 by kael-ala         ###   ########.fr        #
+#    Updated: 2024/05/06 02:08:41 by kael-ala         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ COBJ = $(CFILES:.c=.o)
 all : $(NAME) clean
 
 $(NAME) : $(OBJ) $(COBJ)
-	$(CC) $(FLAGS) $^  -o $(NAME)
+	$(CC) $(FLAGS) $^ -o $(NAME)
 
 
 %.o : %.c $(INCS)

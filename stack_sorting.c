@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 22:33:17 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/04 15:06:08 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/06 02:24:33 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,46 +44,34 @@ void	three_algo(t_stack_a **stack)
 		__reverse_rotate__(stack, 'a');
 }
 
-void	predict_to_push(t_stack_a **a, t_stack_a **b, int next_chunk, int chunk, int middle)
+void	predict_to_push(t_stack_a **a, t_stack_a **b, t_chunks inf)
 {
 	int		predict_min;
 
-	predict_min = find_min_bot(a, next_chunk);
+	predict_min = find_min_bot(a, inf.chunk);
 	if (predict_min != -1)
 	{
-		if (*a && *b && find_min_top(a, next_chunk) != 0
-			&& (*a)->index >= next_chunk && (*b)->index < middle
-			&& (*b)->index > (next_chunk - chunk - 1) && ft_lstsize(*b) >= 2
+		if (*a && *b && find_min_top(a, inf.chunk) != 0
+			&& (*a)->index >= inf.chunk && (*b)->index < inf.mid
+			&& (*b)->index > (inf.chunk - inf.incre - 1) && ft_lstsize(*b) >= 2
 			&& ft_lstsize(*a) >= 2)
 			__rr__(a, b);
-		else if ((*a)->index >= next_chunk && ft_lstsize(*a) >= 2)
+		else if ((*a)->index >= inf.chunk && ft_lstsize(*a) >= 2)
 			__rotate__(a, 'a');
-		else if ((*b)->index < middle && (*b)->index > (next_chunk - chunk - 1)
-			&& ft_lstsize(*b) >= 2)
+		else if ((*b)->index < inf.mid
+			&& (*b)->index > (inf.chunk - inf.incre - 1) && ft_lstsize(*b) >= 2)
 			__rotate__(b, 'b');
 	}
 	else
-		if (b && *b && (*b)->index < middle && ft_lstsize(*b) >= 2)
+		if (b && *b && (*b)->index < inf.mid && ft_lstsize(*b) >= 2)
 			__rotate__(b, 'b');
-}
-
-void	chunk_size(t_stack_a **a, t_chunks *inf)
-{
-	inf->tmp = inf->chunk;
-	if (ft_lstsize(*a) <= 100)
-		inf->incre = 20;
-	else if (ft_lstsize(*a) <= 250 && ft_lstsize(*a) > 100)
-		inf->incre = 35;
-	
-	inf->chunk = inf->chunk + inf->incre;
-	inf->mid = inf->tmp + inf->incre / 2;
 }
 
 void	a_to_b(t_stack_a **a, t_stack_a **b)
 {
-	int		count;
-	int		len;
-	t_chunks inf;
+	int			count;
+	int			len;
+	t_chunks	inf;
 
 	len = ft_lstsize(*a);
 	inf.incre = 55;
@@ -98,7 +86,7 @@ void	a_to_b(t_stack_a **a, t_stack_a **b)
 			{
 				if ((*a)->index < inf.chunk)
 					__push__(a, b, 'b');
-				predict_to_push(a, b, inf.chunk, inf.incre, inf.mid);
+				predict_to_push(a, b, inf);
 			}
 			count++;
 		}

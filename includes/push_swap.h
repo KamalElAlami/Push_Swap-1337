@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:07:54 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/04 14:07:58 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/06 02:21:58 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ typedef struct t_position
 
 typedef struct t_chunks
 {
-	int tmp;
+	int	tmp;
 	int	chunk;
-	int incre;
+	int	incre;
 	int	mid;
 }	t_chunks;
 
@@ -63,7 +63,6 @@ void		lstswap(t_stack_a **stack);
 t_stack_a	*set_stack_a(char *nums);
 int			stack_sorted(t_stack_a *args);
 void		index_stack(t_stack_a *args);
-void		print_stack(t_stack_a *stack);
 int			find_min(t_stack_a **a);
 int			find_pre_max(t_stack_a **b);
 t_position	find_position(t_stack_a **a, int index);
@@ -82,6 +81,7 @@ void		three_algo(t_stack_a **stack);
 void		small_algo(t_stack_a **a, t_stack_a **b);
 void		a_to_b(t_stack_a **a, t_stack_a **b);
 void		b_to_a(t_stack_a **a, t_stack_a **b);
-void		big_algo(t_stack_a **a, t_stack_a **b);
+
+void		chunk_size(t_stack_a **a, t_chunks *inf);
 
 #endif

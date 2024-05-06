@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   stack_inits.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 18:06:30 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/04 00:30:50 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/06 02:30:15 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 #include "./includes/push_swap.h"
+#include "./includes/ft_printf.h"
 
 t_stack_a	*set_stack_a(char *nums)
 {
@@ -89,4 +90,15 @@ int	find_max(t_stack_a **b)
 		tmp = tmp->next;
 	}
 	return (max);
+}
+
+void	chunk_size(t_stack_a **a, t_chunks *inf)
+{
+	inf->tmp = inf->chunk;
+	if (ft_lstsize(*a) <= 100)
+		inf->incre = 20;
+	else if (ft_lstsize(*a) <= 250 && ft_lstsize(*a) > 100)
+		inf->incre = 35;
+	inf->chunk = inf->chunk + inf->incre;
+	inf->mid = inf->tmp + inf->incre / 2;
 }
