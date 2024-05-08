@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:11:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/06 23:44:05 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/08 05:48:31 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 #include "../includes/push_swap.h"
+#include "../includes/get_next_line.h"
 
 void	small_algo(t_stack_a **a, t_stack_a **b)
 {
@@ -56,22 +57,6 @@ void	index_stack(t_stack_a *args)
 			head = head->next;
 		}
 		tmp = tmp->next;
-	}
-}
-
-void	sort_stack(t_stack_a **a, t_stack_a **b)
-{
-	index_stack(*a);
-	if (ft_lstsize(*a) == 2)
-		__swap__(a, 'a');
-	else if (ft_lstsize(*a) == 3)
-		three_algo(a);
-	else if (ft_lstsize(*a) <= 5)
-		small_algo(a, b);
-	else if (ft_lstsize(*a) > 5)
-	{
-		a_to_b(a, b);
-		b_to_a(a, b);
 	}
 }
 

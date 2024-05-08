@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   parsing_utilities.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:06:41 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/06 23:43:58 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/08 05:48:25 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 #include "../includes/push_swap.h"
+#include "../includes/get_next_line.h"
 
 int	ft_isblank(char *buffer)
 {

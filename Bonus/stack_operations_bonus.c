@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   stack_operations.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 21:32:14 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/06 23:44:34 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/08 05:48:48 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 #include "../includes/push_swap.h"
 #include "../includes/ft_printf.h"
+#include "../includes/get_next_line.h"
 
 void	__swap__(t_stack_a **stack, char c)
 {

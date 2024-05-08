@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 18:06:30 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/06 02:30:15 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/08 03:17:32 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,9 +96,9 @@ void	chunk_size(t_stack_a **a, t_chunks *inf)
 {
 	inf->tmp = inf->chunk;
 	if (ft_lstsize(*a) <= 100)
-		inf->incre = 20;
+		inf->incre = 21;
 	else if (ft_lstsize(*a) <= 250 && ft_lstsize(*a) > 100)
-		inf->incre = 35;
+		inf->incre = 34;
 	inf->chunk = inf->chunk + inf->incre;
 	inf->mid = inf->tmp + inf->incre / 2;
 }

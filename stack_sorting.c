@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 22:33:17 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/06 02:24:33 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/08 03:09:47 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	a_to_b(t_stack_a **a, t_stack_a **b)
 	t_chunks	inf;
 
 	len = ft_lstsize(*a);
-	inf.incre = 55;
+	inf.incre = 57;
 	inf.chunk = -1;
 	while (*a)
 	{

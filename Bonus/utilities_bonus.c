@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   utilities.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 19:59:21 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/06 23:44:55 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/08 05:48:52 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 #include "../includes/push_swap.h"
 #include "../includes/ft_printf.h"
+#include "../includes/get_next_line.h"
 
 void	lstrotate(t_stack_a **lst)
 {
