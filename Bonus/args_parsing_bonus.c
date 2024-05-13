@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   args_parsing.c                                     :+:      :+:    :+:   */
+/*   args_parsing_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 22:51:53 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/08 05:48:09 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/10 16:23:27 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/push_swap.h"
-#include "../includes/get_next_line.h"
+#include "../includes/push_swap_bonus.h"
 
 int	extra_operator(char *buffer)
 {

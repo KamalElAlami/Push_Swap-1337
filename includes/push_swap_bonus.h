@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:07:54 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/09 10:30:39 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:06:56 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <limits.h>
+# include <fcntl.h>
 
-typedef struct t_position
-{
-	int	top;
-	int	bot;
-}	t_position;
-
-typedef struct t_chunks
-{
-	int	tmp;
-	int	chunk;
-	int	incre;
-	int	mid;
-}	t_chunks;
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 21
+# endif
 
 typedef struct t_stack_a
 {
@@ -62,26 +54,16 @@ void		lstswap(t_stack_a **stack);
 
 t_stack_a	*set_stack_a(char *nums);
 int			stack_sorted(t_stack_a *args);
-void		index_stack(t_stack_a *args);
-int			find_min(t_stack_a **a);
-int			find_pre_max(t_stack_a **b);
-t_position	find_position(t_stack_a **a, int index);
-int			find_min_top(t_stack_a **a, int chunk);
-int			find_min_bot(t_stack_a **a, int chunk);
-int			find_max_b(t_stack_a **b);
-int			find_max(t_stack_a **b);
 
-void		__swap__(t_stack_a **stack, char c);
-void		__push__(t_stack_a **stack_a, t_stack_a **stack_b, char c);
-void		__rotate__(t_stack_a **stack, char c);
-void		__reverse_rotate__(t_stack_a **stack, char c);
+void		__swap__(t_stack_a **stack);
+void		__push__(t_stack_a **stack_a, t_stack_a **stack_b);
+void		__rotate__(t_stack_a **stack);
+void		__reverse_rotate__(t_stack_a **stack);
 void		__rr__(t_stack_a **stack_a, t_stack_a **stack_b);
+void		__ss__(t_stack_a **stack_a, t_stack_a **stack_b);
+void		__rrr__(t_stack_a **stack_a, t_stack_a **stack_b);
 
-void		three_algo(t_stack_a **stack);
-void		small_algo(t_stack_a **a, t_stack_a **b);
-void		a_to_b(t_stack_a **a, t_stack_a **b);
-void		b_to_a(t_stack_a **a, t_stack_a **b);
-
-void		chunk_size(t_stack_a **a, t_chunks *inf);
+int			check_op(char *buffer, t_stack_a **a, t_stack_a **b);
+char		*get_next_line(int fd);
 
 #endif

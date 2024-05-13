@@ -1,52 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_operations.c                                 :+:      :+:    :+:   */
+/*   stack_operations_bonus.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 21:32:14 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/08 05:48:48 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/12 21:00:41 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-#include "../includes/push_swap.h"
-#include "../includes/ft_printf.h"
-#include "../includes/get_next_line.h"
+#include "../includes/push_swap_bonus.h"
 
-void	__swap__(t_stack_a **stack, char c)
+void	__swap__(t_stack_a **stack)
 {
 	lstswap(stack);
-	if (c == 'a')
-		ft_printf("sa\n");
-	if (c == 'b')
-		ft_printf("sb\n");
 }
 
-void	__push__(t_stack_a **stack_a, t_stack_a **stack_b, char c)
+void	__push__(t_stack_a **stack_a, t_stack_a **stack_b)
 {
 	ft_lstadd_front(stack_a, stack_b);
-	if (c == 'a')
-		ft_printf("pa\n");
-	if (c == 'b')
-		ft_printf("pb\n");
 }
 
-void	__rotate__(t_stack_a **stack, char c)
+void	__rotate__(t_stack_a **stack)
 {
 	lstrotate(stack);
-	if (c == 'a')
-		ft_printf("ra\n");
-	if (c == 'b')
-		ft_printf("rb\n");
 }
 
-void	__reverse_rotate__(t_stack_a **stack, char c)
+void	__reverse_rotate__(t_stack_a **stack)
 {
 	lstreverserotate(stack);
-	if (c == 'a')
-		ft_printf("rra\n");
-	if (c == 'b')
-		ft_printf("rrb\n");
 }

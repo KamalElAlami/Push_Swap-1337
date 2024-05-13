@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing_utilities.c                                :+:      :+:    :+:   */
+/*   parsing_utilities_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:06:41 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/08 05:48:25 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/10 16:23:10 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/push_swap.h"
-#include "../includes/get_next_line.h"
+#include "../includes/push_swap_bonus.h"
 
 int	ft_isblank(char *buffer)
 {

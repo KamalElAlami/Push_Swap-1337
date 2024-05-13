@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_sorting.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 22:33:17 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/08 03:09:47 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/13 03:04:22 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,28 @@
 
 void	three_algo(t_stack_a **stack)
 {
-	if ((*stack)->number > (*stack)->next->number
-		&& (*stack)->next->number < (*stack)->next->next->number
-		&& (*stack)->number < (*stack)->next->next->number)
+	int	n1;
+	int	n2;
+	int	n3;
+
+	n1 = (*stack)->number;
+	n2 = (*stack)->next->number;
+	n3 = (*stack)->next->next->number;
+	if (n1 > n2 && n2 < n3 && n1 < n3)
 		__swap__(stack, 'a');
-	else if ((*stack)->number > (*stack)->next->number
-		&& (*stack)->next->number > (*stack)->next->next->number
-		&& (*stack)->number > (*stack)->next->next->number)
+	else if (n1 > n2 && n2 > n3 && n1 > n3)
 	{
 		__swap__(stack, 'a');
 		__reverse_rotate__(stack, 'a');
 	}
-	else if ((*stack)->number > (*stack)->next->number
-		&& (*stack)->next->number < (*stack)->next->next->number
-		&& (*stack)->number > (*stack)->next->next->number)
+	else if (n1 > n2 && n2 < n3 && n1 > n3)
 		__rotate__(stack, 'a');
-	else if ((*stack)->number < (*stack)->next->number
-		&& (*stack)->next->number > (*stack)->next->next->number
-		&& (*stack)->number < (*stack)->next->next->number)
+	else if (n1 < n2 && n2 > n3 && n1 < n3)
 	{
 		__swap__(stack, 'a');
 		__rotate__(stack, 'a');
 	}
-	else if ((*stack)->number < (*stack)->next->number
-		&& (*stack)->next->number > (*stack)->next->next->number
-		&& (*stack)->number > (*stack)->next->next->number)
+	else if (n1 < n2 && n2 > n3 && n1 > n3)
 		__reverse_rotate__(stack, 'a');
 }
 

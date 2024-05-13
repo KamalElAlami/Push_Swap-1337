@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 17:42:22 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/12/19 22:38:05 by kael-ala         ###   ########.fr       */
+/*   Created: 2024/05/11 13:13:56 by kael-ala          #+#    #+#             */
+/*   Updated: 2024/05/13 03:10:10 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../includes/push_swap_bonus.h"
+#include "../includes/libft.h"
 
 char	*ft_reader(int fd, char *rst)
 {
@@ -21,7 +22,7 @@ char	*ft_reader(int fd, char *rst)
 	buff = malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!buff)
 		return (NULL);
-	while (ft_strchr(rst, '\n') != 0 && count > 0)
+	while (ft_strchr(rst, '\n') == 0 && count > 0)
 	{
 		count = read(fd, buff, BUFFER_SIZE);
 		if (count < 0)
@@ -83,8 +84,6 @@ char	*rst_joiner(char *rst)
 	while (rst[i] && rst[i] != '\n')
 		i++;
 	restofline = malloc(sizeof(char) * (ft_strlen(rst) - i) + 1);
-	if (!restofline)
-		return (free(rst), NULL);
 	if (rst[i] != '\0')
 		i++;
 	while (rst[i])
@@ -106,7 +105,7 @@ char	*get_next_line(int fd)
 		return (free(rst), rst = NULL, NULL);
 	buff = line_stack(rst);
 	if (!buff)
-		return (rst = NULL, NULL);
+		return (NULL);
 	rst = rst_joiner(rst);
 	return (buff);
 }
