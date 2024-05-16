@@ -46,6 +46,14 @@ char	*set_buffer(char **args)
 	i = 1;
 	buffer = NULL;
 	while (args[i])
+		if (!args[i++][0])
+			ft_perror("Error\n");
+	i = 1;
+	while (args[i])
+		if (ft_isblank(args[i++]))
+			ft_perror("Error\n");
+	i = 1;
+	while (args[i])
 	{
 		temp = ft_strjoin(buffer, args[i]);
 		free(buffer);
