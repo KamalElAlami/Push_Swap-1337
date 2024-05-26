@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kael-ala <kael-ala@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 13:13:56 by kael-ala          #+#    #+#             */
-/*   Updated: 2024/05/13 03:10:10 by kael-ala         ###   ########.fr       */
+/*   Updated: 2024/05/25 15:21:47 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_reader(int fd, char *rst)
 {
 	int		count;
 	char	*buff;
+	char	*clear;
 
 	count = 1;
 	buff = malloc(sizeof(char) * BUFFER_SIZE + 1);
@@ -31,7 +32,9 @@ char	*ft_reader(int fd, char *rst)
 			return (free(buff), NULL);
 		}
 		buff[count] = '\0';
+		clear = rst;
 		rst = ft_strjoin(rst, buff);
+		free(clear);
 	}
 	free (buff);
 	return (rst);
